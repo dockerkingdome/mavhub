@@ -2,12 +2,47 @@
 <head>
   <style>
     body {
-      background: linear-gradient(gray, white);
-    }
+  background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+  overflow: hidden;
+  height: 100vh;
+  margin: 0;
+}
+
+.snowflake {
+  position: absolute;
+  top: -10px;
+  background: white;
+  border-radius: 50%;
+  opacity: 0.8;
+  pointer-events: none;
+  animation: fall linear infinite, sway ease-in-out infinite;
+}
+
+@keyframes fall {
+  0% {
+    transform: translateY(-10vh);
+  }
+  100% {
+    transform: translateY(110vh);
+  }
+}
+
+@keyframes sway {
+  0%, 100% {
+    margin-left: 0px;
+  }
+  50% {
+    margin-left: 20px;
+  }
+}
     font-family: sans-serif;
   </style>
 </head>
 <body>
+  <div class="snow">
+  <div class="snowflake"></div>
+  <!-- Dodaj więcej elementów .snowflake lub wygeneruj je w JS -->
+</div>
   <h1>under construction</h1>
 </body>
 </html>
